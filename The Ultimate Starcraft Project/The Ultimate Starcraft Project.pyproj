@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>352cb991-c39a-4d52-8241-92fedbe0f6d2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>hiveDetection.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>The Ultimate Starcraft Project</Name>
+    <RootNamespace>The Ultimate Starcraft Project</RootNamespace>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="hiveDetection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResizeMainImage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CreateNegDescript.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="The_Ultimate_Starcraft_Project.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\hive_cascade.xml.xml" />
+    <Content Include="data\params.xml" />
+    <Content Include="data\stage0.xml" />
+    <Content Include="data\stage1.xml" />
+    <Content Include="data\stage2.xml" />
+    <Content Include="data\stage3.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
